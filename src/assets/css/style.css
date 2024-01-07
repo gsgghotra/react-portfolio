@@ -1,0 +1,330 @@
+/* Variables */
+:root{
+    --primaryColor :  #28293E;
+    --secondaryColor : #F3D1BF;
+}
+
+*{
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Logo */
+#component img{
+    width: 486px;
+    height: 189px;
+}
+/* Navigation */
+#navbarNav ul li a{
+    color: white;
+    font-weight: 100;
+}
+/* About me */
+#aboutMe {
+    background-color: var(--secondaryColor);
+    min-height: 350px;
+    padding-bottom: 40px;
+    font-size: 20px;
+    line-height:1.6em;
+    word-spacing: 1px;
+}
+/* Work */
+#work {
+    max-width: 1400px;
+    background-color: var(--primaryColor);
+    min-height: 350px;
+}
+/* Contact me */
+#contactMe {
+    background-color: var(--secondaryColor);
+    min-height: 350px;
+}
+/* Footer */
+#footer{
+    height:fit-content;
+    background-color: var(--primaryColor);
+}
+
+
+/* Fonts */
+.heading{
+    color: black;
+    text-align: center;
+    line-height: 42px;
+    font-weight: bold;
+	/* text-transform: uppercase; */
+    padding-top: 50px !important;
+}
+
+/* Color classes */
+.primary-color{
+    color: var(--primaryColor);
+}
+.secondary-color{
+    color: var(--secondaryColor);
+}
+.primary-bg{
+    background-color: var(--primaryColor);
+}
+
+/* Hero Section*/
+.heroContainer {
+    padding-bottom: 100px;
+}
+
+    /* Heading and Buttons */
+.heroText{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+
+.heroSubText {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    line-height: 1.4;
+}
+
+.btn-basic{
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    width: 180px;
+    height: 38px;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid var(--primaryColor);
+}
+.btn-basic:hover{
+    background-color: transparent;
+    border: 1px solid var(--secondaryColor);
+}
+
+.btn-secondary{
+    background-color: transparent !important;
+    color: var(--secondaryColor);
+    width: 180px;
+    height: 38px;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+    /* Image Section designs in Hero*/
+.imageBox {
+    position: relative;
+    background-color: var(--secondaryColor);
+    margin-top: 50px;
+    width: 300px;
+    height: 500px;
+    border-radius: 150px;
+    overflow: hidden;
+}
+
+.imageBox .image{
+    background-color: transparent;
+    background-position: bottom;
+    background-image: url(../images/profilepic.png);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:2px;
+    /* margin: 0 auto; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Stars and buttons for profile picture */
+.hero-profile .star{
+    width: 1em;
+    font-size: 1.5em;
+    position: relative;
+    margin: 1em auto;
+    box-shadow: rgb(239 206 188) 0px 10px 30px 5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.hero-profile .star:before{
+    content:"";
+    position:absolute;
+    background:#DE0206;
+    width:1em;
+    height:1.15em;
+    transform:rotate(-45deg) skewX(22.5deg) skewY(22.5deg);
+}
+.hero-profile .star:after{
+    content:"";
+    position:absolute;
+    background:#DE0206;
+    width:1em;
+    height:1.15em;
+    transform:rotate(45deg) skewX(22.5deg) skewY(22.5deg);
+}
+
+.hero-profile .star-top{
+    top: 78px;
+    margin-left: 250px;
+}
+.hero-profile .star-bottom{
+    bottom: -10px;
+    margin-right: 40px;
+}
+.text-container {
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.job{
+    margin-left: 300px;
+    bottom: 200px;
+}
+
+.experience{
+    margin-right: 300px;
+    bottom: 50px;
+}
+
+
+/* Hero Text Background Designs (Circle and the stars)*/
+.back-circle{
+    width: 90%;
+    left: 195px;
+    top: 174px;
+    position: relative;
+    height: 113.061px;
+    transform: rotate(-6.825deg);
+    flex-shrink: 0;
+
+    /* Border Properties */
+    background: linear-gradient(var(--primaryColor) 0 0) padding-box, /*this is your grey background*/ 
+                linear-gradient(90deg, rgb(91 97 86 / 80%) 25%, rgb(113 134 99 / 72%) 49%, rgb(160 160 233 / 62%) 72%, rgb(0 99 255 / 54%) 88%);
+    border: 2px solid transparent;
+    border-left-color: rgb(81 85 82);
+    border-right-color: rgb(0 74 191 / 70%);
+    border-radius: 50%;
+}
+
+.back-circle .star{
+    width: 1em;
+    font-size: 10px;
+    position: relative;
+    margin: 1em auto;
+    box-shadow: rgb(239 206 188) 0px 10px 30px 5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.back-circle .star:before{
+    content:"";
+    position:absolute;
+    background:var(--secondaryColor);
+    width:1em;
+    height:1.15em;
+    transform:rotate(-45deg) skewX(22.5deg) skewY(22.5deg);
+}
+.back-circle .star:after{
+    content:"";
+    position:absolute;
+    background:var(--secondaryColor);
+    width:1em;
+    height:1.15em;
+    transform:rotate(45deg) skewX(22.5deg) skewY(22.5deg);
+}
+
+.back-circle .star-top {
+    top: -20px;
+    right: -60px;
+}
+.back-circle .star-bottom {
+    right: 92px;
+    top: 82px;
+}
+
+/* Footer cards */
+.contact-card{
+    height: 90px;
+    border-radius: 5px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+
+}
+
+.contact-link a:hover{
+    font-size: 110%;
+}
+
+/* Card Design in work section*/
+.custom-card{
+    min-width: 300px;
+    height: 80%;
+    max-width: 100%;
+    margin: 5rem auto;
+    border: 1px solid #ffffff22;
+    background-color: #282c34;
+    color: white;
+    background: linear-gradient(0deg, rgba(40,44,52,1) 0%, rgba(17,0,32,.5) 100%);
+    box-shadow: 0 7px 20px 5px #00000088;
+    border-radius: .7rem;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    overflow: hidden;
+    transition: .5s all;
+    .card-img-top{
+        filter: grayscale(25%);
+    }
+    .card-body .description{
+        height: 50px;
+        overflow: hidden;
+    }
+    .card-body h2 {
+        letter-spacing: 1px;
+    }
+    .techInfo{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 14px;
+        word-spacing: 2px;
+    
+        .tech{
+            display: flex;
+            color: #a89ec9;
+            margin-right: 10px;
+        }
+    }
+    .creator {
+        color: #a89ec9;
+        font-size: 14px;
+    }    
+        ::before{
+            position: fixed;
+            content: "";
+            box-shadow: 0 0 100px 40px #ffffff08;
+            top: -10%;
+            left: -100%;
+            transform: rotate(-45deg);
+            height: 60rem;
+            transition: .7s all;
+        }
+
+        &:hover{
+        border: 1px solid #ffffff44;
+        box-shadow: 0 7px 50px 10px #000000aa;
+        transform: scale(1.015);
+        filter: brightness(1.3);
+
+        ::before{
+            filter: brightness(.5);
+            top: -100%;
+            left: 200%;
+        }
+    }  
+}
+
+/* Changing logo size on small screens */
+@media only screen and (max-width: 900px) {
+    .logo-image{
+        width: 291px !important;
+        height: 100% !important;
+    }
+}
