@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import './App.css'
 import './assets/css/style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,12 +13,18 @@ import Footer from './components/Footer/Footer'
 function App() {
   return (
     <>
-    <Header></Header>
-    <Hero></Hero>
-    <AboutMe></AboutMe>
-    <Work></Work>
-    <ContactMe></ContactMe>
-    <Footer></Footer>
+      <Router>
+        <div>
+          <Header />
+            <Routes>
+              <Route path="/" element={<Hero/>} />
+              <Route path="/home" element={<Hero/>} />
+              <Route path="/work" element={<Work/>} />
+              <Route path="/contactme" element={<ContactMe/>} />
+            </Routes>
+          <Footer />
+        </div>
+      </Router>
     </>
   )
 }

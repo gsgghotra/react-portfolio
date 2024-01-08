@@ -1,8 +1,8 @@
-import logo from '../../assets/images/Logo.png'
+import logo from '../../assets/images/Logo.png';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
     return(
-    <>
         <header className="primary-bg">
             <div id="component" className="container-fluid py-1 d-flex justify-content-center">
                 <a className="nav-link" aria-current="page" href="#">
@@ -15,10 +15,16 @@ const Header = () => {
                         <div className="navbar-collapse" id="navbarNav">
                             <ul className="navbar-nav d-flex align-items-center">
                             <li className="nav-item">
-                                <a className="nav-link" aria-current="page" href="#aboutMe">About Me</a>
+                            <NavLink
+                                to="/"
+                                end
+                                className="nav-link"
+                            >
+                                Home
+                            </NavLink>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#work">Work</a>
+                                <NavLink to="/work" className="nav-link" end> Work </NavLink>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#contactMe">Contact Me</a>
@@ -29,7 +35,6 @@ const Header = () => {
                 </nav>
             </div>
         </header>
-    </>
 )}
 
 export default Header;
