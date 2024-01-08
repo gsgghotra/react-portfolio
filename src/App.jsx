@@ -5,11 +5,11 @@ import './assets/css/style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Header from './components/Header/Header'
-import Hero from './components/Hero/Hero'
-import AboutMe from './components/AboutMe/AboutMe'
-import Work from './components/Work/Work'
-import ContactMe from './components/ContactMe/ContactMe'
+import Home from './pages/Home'
+import Work from './pages/Work'
+import Contact from './pages/Contact'
 import Footer from './components/Footer/Footer'
+
 function App() {
   return (
     <>
@@ -17,10 +17,10 @@ function App() {
         <div>
           <Header />
             <Routes>
-              <Route path="/" element={<Hero/>} />
-              <Route path="/home" element={<Hero/>} />
+              <Route path="/" element={<Home/>} />
+              <Route path="/home" element={<Home/>} />
               <Route path="/work" element={<Work/>} />
-              <Route path="/contactme" element={<ContactMe/>} />
+              <Route path="/contactme" element={<Contact/>} />
             </Routes>
           <Footer />
         </div>
