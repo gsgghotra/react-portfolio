@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './App.css'
-import './assets/css/style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './assets/css/style.css'
 
 import Header from './components/Header/Header'
 import Home from './pages/Home'
@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <Router>
-        <div>
+        <div className='primary-bg'> 
           <Header />
             <Routes>
               <Route path="/" element={<Home/>} />
