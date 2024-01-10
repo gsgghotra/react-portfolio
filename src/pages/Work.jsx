@@ -2,20 +2,41 @@ import Project from '../components/Project/Project';
 
 // Import images
 import project1 from '../assets/images/harmony.png';
+
+// Projects
+const projects = [
+    {name: "HarmonyHeal - Music App",
+    tech: "HTML, CSS, Bootstrap, JavaScript, Rest API (Spotify API)",
+    description: "The ultimate music meditation app to enhance your well-being.",
+    link: "https://gsgghotra.github.io/HarmonyHeal/",
+    type: "Group Project (Bootcamp)",
+    image: project1
+    }
+
+
+
+
+]
 const Work = () => {
     return(
         <section className="container-fluid" id="work">
             <h2 className="w-auto p-3 fs-1 heading secondary-color" >Work</h2>
             <div className="container-fluid p-3 d-flex justify-content-center flex-nowrap">
                 <div className="row">
-                    <Project 
-                    name="HarmonyHeal - Music App"
-                    tech="HTML, CSS, Bootstrap, JavaScript, Rest API (Spotify API)"
-                    description="The ultimate music meditation app to enhance your well-being."
-                    link="https://gsgghotra.github.io/HarmonyHeal/"
-                    type="Group Project (Bootcamp)"
-                    image={project1}
-                    ></Project>
+                    {/* Can be looped if the projects are array of objects */}
+                    {projects.map((project)=>{
+                        return(
+                            <Project 
+                                name= {project.name}
+                                tech= {project.tech}
+                                description= {project.description}
+                                link= {project.link}
+                                type= {project.type}
+                                image= {project.image}
+                                ></Project>
+                        )
+                    })}
+                    
                 </div>
             </div>
         </section>

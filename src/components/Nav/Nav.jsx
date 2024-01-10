@@ -16,7 +16,7 @@ const Nav = () => {
                         <NavLink to="/contactme" className="nav-link" end> Contact me </NavLink>
                     </li>
                     <li className="nav-item">
-                        <a href="" target="blank" className="nav-link"> Resume </a>
+                        <a href="https://docs.google.com/document/d/1MX_XYa1h61EmjJqQFzjMovJFZ0BnMrnFWV4NuCzTV1Y/edit?usp=sharing" target="_blank" className="nav-link"> Resume </a>
                     </li>
                     </ul>
                 </div>
