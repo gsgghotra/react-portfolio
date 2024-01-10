@@ -10,9 +10,10 @@ const Work = () => {
             <div className="container-fluid p-3 d-flex justify-content-center flex-nowrap">
                 <div className="row">
                     {/* Can be looped if the projects are array of objects */}
-                    {projects.map((project)=>{
+                    {projects.map((project, index)=>{
                         return(
                             <Project 
+                                key = {index}
                                 name= {project.name}
                                 tech= {project.tech}
                                 description= {project.description}
