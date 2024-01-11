@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 const Hero = () => {
     return(
         // Hide the hero on small screen
@@ -25,8 +26,8 @@ const Hero = () => {
                                     </div>
         
                                     {/* Buttons */}
-                                    <button type="button" className="btn btn-basic btn-md mt-3" >Contact me</button>
-                                    <button type="button" className="btn btn-secondary btn-md mt-3">Explore Projects</button>
+                                    <NavLink to="contactme" end className="btn btn-basic btn-md mt-3"> Contact me </NavLink>
+                                    <NavLink to="work" end className="btn btn-secondary btn-md mt-3"> Explore Projects </NavLink>
                                 </div>
                             </div>
                         </div>
