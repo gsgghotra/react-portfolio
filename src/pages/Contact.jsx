@@ -1,6 +1,9 @@
+import ContactForm from "../components/Form/ContactForm";
+
 const Contact = () => {
     return(
         <section className="container-fluid" id="contactMe">
+            <ContactForm/>
                 <h2 className="w-auto p-3 fs-1 heading primary-color" >Contact Me</h2>
                     <div className="row pt-3 d-flex justify-content-center">
                         {/* Contact me Card */}
