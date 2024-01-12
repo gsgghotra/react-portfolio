@@ -38,6 +38,7 @@
 #contactMe {
     background-color: var(--secondaryColor);
     min-height: 550px;
+    padding-bottom: 100px;
 }
 /* Footer */
 #footer{

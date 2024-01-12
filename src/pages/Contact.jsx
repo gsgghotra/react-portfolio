@@ -33,6 +33,12 @@ const Contact = () => {
                             {/* Form */}
                             <form className="form" style={{width:'90%', margin: '0px auto'}}>
                                 <div className="row w-100 text-center">
+                                    <h4 
+                                        style={{color:'#28293E', margin:'15px 0px', position:'relative', top:'-10px'}}>
+                                        Send me a message
+                                    </h4>
+
+
                                     <div className="mb-3 col-lg-6">
                                         <input
                                         className="form-control"
@@ -54,7 +60,7 @@ const Contact = () => {
                                             />
                                     </div>
                                     <div className="mb-3 col-lg-12">
-                                        <input
+                                        <textarea
                                             className="form-control"
                                             // value={formData.firstName}
                                             name="message"
@@ -63,7 +69,7 @@ const Contact = () => {
                                             placeholder="Message"
                                             />
                                     </div>
-                                    <button className="btn btn-primary col-lg-12" style={{backgroundColor: '#28293E', outline:'none', border:'none'}}>
+                                    <button className="btn btn-primary col-lg-4" style={{backgroundColor: '#28293E', outline:'none', border:'none', margin:'0px auto'}}>
                                         Submit
                                     </button>
                                 </div>
