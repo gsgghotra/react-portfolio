@@ -2,18 +2,21 @@ import { useState } from "react";
 
 const Contact = () => {
 
-      // Setting the component's initial state
+    // Setting the component's initial state
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
         message: '',
     });
+
+    const [error, setError] = useState('');
     
     //On change
     const handleInputChange = (event) => {
         // Getting the value and name of the input which triggered the change
         let value = event.target.value;
         const name = event.target.name;
+        setError('')
 
         // Updating the input's state
         setFormData({
@@ -26,17 +29,21 @@ const Contact = () => {
     const handleFormSubmit = (event) => {
         // Preventing the default behavior of the form submit (which is to refresh the page)
         event.preventDefault();
+
+        // Validate email format using a regular expression
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
         if (!formData.fullName || !formData.email) {
-            alert('Fill out your Name and Email please!');
-        } else{
-            // Validate email format using a regular expression
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(formData.email)) {
-                alert('Invalid email address');
-                return;
-            }
-            alert(`Hello ${formData.fullName} ${formData.email}`);
-        }
+            setError('Fill out your Name and Email please!');
+            return;
+        } else if (!emailRegex.test(formData.email)) {
+            setError('Invalid email address');
+            return;
+        } else if(!formData.message){ //If empty message
+            setError('Please enter your message');
+            return;
+        }       
+            //What if success
     
         setFormData({
             fullName: '',
@@ -83,8 +90,11 @@ const Contact = () => {
                                         style={{color:'#28293E', margin:'15px 0px', position:'relative', top:'-10px'}}>
                                         Send me a message {formData.fullName}
                                     </h4>
-
-
+                                    {error &&
+                                        <div className="alert alert-danger" role="alert">
+                                            {error}
+                                        </div>
+                                    }
                                     <div className="mb-3 col-lg-6">
                                         <input
                                         className="form-control"
