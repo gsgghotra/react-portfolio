@@ -1,4 +1,26 @@
+import { useState } from "react";
+
 const Contact = () => {
+
+      // Setting the component's initial state
+    const [formData, setFormData] = useState({
+        fullName: '',
+        email: '',
+        message: '',
+    });
+    
+    const handleInputChange = (event) => {
+        // Getting the value and name of the input which triggered the change
+        let value = event.target.value;
+        const name = event.target.name;
+
+        // Updating the input's state
+        setFormData({
+            ...formData,
+            [name]: value,
+        });
+    };
+
     return(
         <section className="container-fluid" id="contactMe">
                 <h2 className="w-auto p-3 fs-1 heading primary-color" >Contact Me</h2>
@@ -35,26 +57,26 @@ const Contact = () => {
                                 <div className="row w-100 text-center">
                                     <h4 
                                         style={{color:'#28293E', margin:'15px 0px', position:'relative', top:'-10px'}}>
-                                        Send me a message
+                                        Send me a message {formData.fullName}
                                     </h4>
 
 
                                     <div className="mb-3 col-lg-6">
                                         <input
                                         className="form-control"
-                                        // value={formData.firstName}
-                                        name="firstName"
-                                        // onChange={handleInputChange}
+                                        value={formData.fullName}
+                                        name="fullName"
+                                        onChange={handleInputChange}
                                         type="text"
-                                        placeholder="First Name"
+                                        placeholder="Full Name"
                                         />
                                     </div>
                                     <div className="mb-3 col-lg-6">
                                         <input
                                             className="form-control"
-                                            // value={formData.firstName}
+                                            value={formData.email}
                                             name="email"
-                                            // onChange={handleInputChange}
+                                            onChange={handleInputChange}
                                             type="text"
                                             placeholder="Email"
                                             />
@@ -62,9 +84,9 @@ const Contact = () => {
                                     <div className="mb-3 col-lg-12">
                                         <textarea
                                             className="form-control"
-                                            // value={formData.firstName}
+                                            value={formData.message}
                                             name="message"
-                                            // onChange={handleInputChange}
+                                            onChange={handleInputChange}
                                             type="text"
                                             placeholder="Message"
                                             />
