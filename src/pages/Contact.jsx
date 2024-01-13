@@ -28,7 +28,13 @@ const Contact = () => {
         event.preventDefault();
         if (!formData.fullName || !formData.email) {
             alert('Fill out your Name and Email please!');
-        } else {
+        } else{
+            // Validate email format using a regular expression
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(formData.email)) {
+                alert('Invalid email address');
+                return;
+            }
             alert(`Hello ${formData.fullName} ${formData.email}`);
         }
     
