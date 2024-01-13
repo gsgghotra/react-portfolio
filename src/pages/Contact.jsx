@@ -9,6 +9,7 @@ const Contact = () => {
         message: '',
     });
     
+    //On change
     const handleInputChange = (event) => {
         // Getting the value and name of the input which triggered the change
         let value = event.target.value;
@@ -21,6 +22,23 @@ const Contact = () => {
         });
     };
 
+    //on submit
+    const handleFormSubmit = (event) => {
+        // Preventing the default behavior of the form submit (which is to refresh the page)
+        event.preventDefault();
+        if (!formData.fullName || !formData.email) {
+            alert('Fill out your Name and Email please!');
+        } else {
+            alert(`Hello ${formData.fullName} ${formData.email}`);
+        }
+    
+        setFormData({
+            fullName: '',
+            email: '',
+            message: '',
+        });
+    };
+    
     return(
         <section className="container-fluid" id="contactMe">
                 <h2 className="w-auto p-3 fs-1 heading primary-color" >Contact Me</h2>
@@ -91,7 +109,7 @@ const Contact = () => {
                                             placeholder="Message"
                                             />
                                     </div>
-                                    <button className="btn btn-primary col-lg-4" style={{backgroundColor: '#28293E', outline:'none', border:'none', margin:'0px auto'}}>
+                                    <button className="btn btn-primary col-lg-4" onClick={handleFormSubmit} style={{backgroundColor: '#28293E', outline:'none', border:'none', margin:'0px auto'}}>
                                         Submit
                                     </button>
                                 </div>
