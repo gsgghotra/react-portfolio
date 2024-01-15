@@ -17,13 +17,13 @@ const Contact = () => {
         // Validate email format using a regular expression
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        if (!form.current[0] || !form.current[1]) {
+        if (!form.current[0].value || !form.current[1].value) {
             setError('Fill out your Name and Email please!');
             return;
-        } else if (!emailRegex.test(form.current[1])) {
+        } else if (!emailRegex.test(form.current[1].value)) {
             setError('Invalid email address');
             return;
-        } else if(!form.current[2]){ //If empty message
+        } else if(!form.current[2].value){ //If empty message
             setError('Please enter your message');
             return;
         }       
