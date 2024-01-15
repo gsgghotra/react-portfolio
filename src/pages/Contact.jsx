@@ -32,6 +32,9 @@ const Contact = () => {
             emailjs.sendForm('service_ajq4xh7', 'template_gy58glu', form.current, 'VHnQQ5senYdwFBNrp')
             .then((result) => {
                 console.log(result.text);
+                form.current[0].value = ""
+                form.current[1].value = ""
+                form.current[2].value = ""
             }, (error) => {
                 console.log(error.text);
             });
