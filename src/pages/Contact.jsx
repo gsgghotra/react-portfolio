@@ -1,29 +1,13 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
 
     // Setting the component's initial state
-    const [formData, setFormData] = useState({
-        fullName: '',
-        email: '',
-        message: '',
-    });
+    const form = useRef();
 
     const [error, setError] = useState('');
     
-    //On change
-    const handleInputChange = (event) => {
-        // Getting the value and name of the input which triggered the change
-        let value = event.target.value;
-        const name = event.target.name;
-        setError('')
-
-        // Updating the input's state
-        setFormData({
-            ...formData,
-            [name]: value,
-        });
-    };
 
     //on submit
     const handleFormSubmit = (event) => {
@@ -33,23 +17,27 @@ const Contact = () => {
         // Validate email format using a regular expression
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        if (!formData.fullName || !formData.email) {
+        if (!form.current[0] || !form.current[1]) {
             setError('Fill out your Name and Email please!');
             return;
-        } else if (!emailRegex.test(formData.email)) {
+        } else if (!emailRegex.test(form.current[1])) {
             setError('Invalid email address');
             return;
-        } else if(!formData.message){ //If empty message
+        } else if(!form.current[2]){ //If empty message
             setError('Please enter your message');
             return;
         }       
-            //What if success
-    
-        setFormData({
-            fullName: '',
-            email: '',
-            message: '',
-        });
+        //if success, send email
+        try{
+            emailjs.sendForm('service_ajq4xh7', 'template_gy58glu', form.current, 'VHnQQ5senYdwFBNrp')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        }catch(error){
+            console.log("Error sending email", error.message);
+        }
     };
     
     return(
@@ -84,11 +72,11 @@ const Contact = () => {
                     <div className="col-lg-8 col-sm-10">
                         <div className="contact-card w-100 pt-3">
                             {/* Form */}
-                            <form className="form" style={{width:'90%', margin: '0px auto'}}>
+                            <form className="form" ref={form} style={{width:'90%', margin: '0px auto'}}>
                                 <div className="row w-100 text-center">
                                     <h4 
                                         style={{color:'#28293E', margin:'15px 0px', position:'relative', top:'-10px'}}>
-                                        Send me a message {formData.fullName}
+                                        Send me a message
                                     </h4>
                                     {error &&
                                         <div className="alert alert-danger" role="alert">
@@ -98,9 +86,7 @@ const Contact = () => {
                                     <div className="mb-3 col-lg-6">
                                         <input
                                         className="form-control"
-                                        value={formData.fullName}
-                                        name="fullName"
-                                        onChange={handleInputChange}
+                                        name="user_name"
                                         type="text"
                                         placeholder="Full Name"
                                         />
@@ -108,9 +94,7 @@ const Contact = () => {
                                     <div className="mb-3 col-lg-6">
                                         <input
                                             className="form-control"
-                                            value={formData.email}
-                                            name="email"
-                                            onChange={handleInputChange}
+                                            name="user_email"
                                             type="text"
                                             placeholder="Email"
                                             />
@@ -118,9 +102,7 @@ const Contact = () => {
                                     <div className="mb-3 col-lg-12">
                                         <textarea
                                             className="form-control"
-                                            value={formData.message}
                                             name="message"
-                                            onChange={handleInputChange}
                                             type="text"
                                             placeholder="Message"
                                             />
