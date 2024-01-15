@@ -34,6 +34,7 @@ const Form = () => {
                 form.current[1].value = ""
                 form.current[2].value = ""
             }, (error) => {
+                setDisplayMessage("Error sending email!")
                 console.log(error.text);
             });
         }catch(error){
