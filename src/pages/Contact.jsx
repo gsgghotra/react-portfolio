@@ -5,15 +5,13 @@ const Contact = () => {
 
     // Setting the component's initial state
     const form = useRef();
-
     const [error, setError] = useState('');
+    const [alertType, setAlertType] = useState("alert alert-danger");
     
-
     //on submit
     const handleFormSubmit = (event) => {
         // Preventing the default behavior of the form submit (which is to refresh the page)
         event.preventDefault();
-
         // Validate email format using a regular expression
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -31,6 +29,8 @@ const Contact = () => {
         try{
             emailjs.sendForm('service_ajq4xh7', 'template_gy58glu', form.current, 'VHnQQ5senYdwFBNrp')
             .then((result) => {
+                setAlertType("alert alert-success");
+                setError("Message sent successfully!")
                 console.log(result.text);
                 form.current[0].value = ""
                 form.current[1].value = ""
@@ -82,7 +82,7 @@ const Contact = () => {
                                         Send me a message
                                     </h4>
                                     {error &&
-                                        <div className="alert alert-danger" role="alert">
+                                        <div className={alertType} role="alert">
                                             {error}
                                         </div>
                                     }
