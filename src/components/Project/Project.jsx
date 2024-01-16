@@ -17,6 +17,9 @@ const Project = (props) => {
                     <div className='creator'>
                         <div className='wrapper'>
                             {type}
+                            <span style={{float:'right'}}>
+                                <a href="www.github.com" target="_blank">Github</a>
+                            </span>
                         </div>
                     </div>
                 </div>
