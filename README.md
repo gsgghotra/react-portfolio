@@ -1,4 +1,4 @@
-# Gurjeet's bootstrap-portfolio
+# Gurjeet's Portfolio
 
 Welcome to my portfolio! This README file provides an overview of the contents of my portfolio and how to navigate it.
 - **Visit** my portfolio at: https://portfolio-gurjeet.netlify.app/
