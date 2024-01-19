@@ -1,5 +1,5 @@
 const Project = (props) => {
-    const {name, tech, description, link, type, image} = props
+    const {name, tech, description, link, type, image, github} = props
     return(
         <article className="col-lg-4 col-md-4 col-sm-12" style={{flexGrow: 1, width: '320px'}}>
         <a className="text-decoration-none" href={link} target="_blank">
@@ -18,7 +18,7 @@ const Project = (props) => {
                         <div className='wrapper'>
                             {type}
                             <span style={{float:'right'}}>
-                                <a href="www.github.com" target="_blank">Github</a>
+                                <a href={github} target="_blank" style={{color: 'white'}}>Github</a>
                             </span>
                         </div>
                     </div>

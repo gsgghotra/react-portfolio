@@ -9,7 +9,7 @@ const Footer = () => {
                     </a>
                 </div>
                 <div className="d-flex justify-content-center col-lg-6 col-sm-12">
-                    <a className="link-light p-2" href="https://github.com/gsgghotra?tab=repositories" target="_blank"><i className=" fa-brands fa-github fa-2xl" style={{color: '#F3D1BF'}}></i></a>
+                    <a className="link-light p-2" href="https://github.com/gsgghotra" target="_blank"><i className=" fa-brands fa-github fa-2xl" style={{color: '#F3D1BF'}}></i></a>
                     <a className="link-light p-2" href="https://www.linkedin.com/in/gsgghotra" target="_blank"><i className=" fa-brands fa-linkedin fa-2xl" style={{color: '#F3D1BF'}}></i></a>
                 </div>
                 <div className="d-flex justify-content-center col-lg-3 col-sm-12">

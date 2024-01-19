@@ -20,6 +20,7 @@ const Work = () => {
                                 link= {project.link}
                                 type= {project.type}
                                 image= {project.image}
+                                github= {project.github}
                                 ></Project>
                         )
                     })}
