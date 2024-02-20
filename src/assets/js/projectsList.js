@@ -7,7 +7,7 @@ import workDay from '../images/workday.png';
 // import codingTest from '../images/codingtest.png';
 import mobiles from '../images/mobiles.png';
 import scents from '../images/scents.png';
-import sneakerStreets from '../images/sneakerStreets.png'
+import sneakerStreets from '../images/sneakerstreets.png'
 
 // Add or remove projects here
 const projects = [
