@@ -7,9 +7,19 @@ import workDay from '../images/workday.png';
 import codingTest from '../images/codingtest.png';
 import mobiles from '../images/mobiles.png';
 import scents from '../images/scents.png';
+import sneakerStreets from '../images/sneakerStreets.png'
 
 // Add or remove projects here
 const projects = [
+    {
+        name: "SneakerStreets",
+        tech: "ReactJs, JavaScript, React Redux, NodeJs, NPM, Vite, Bootstrap, Tailwind",
+        description: "An innovative eCommerce platform dedicated to providing sneaker enthusiasts",
+        link: "https://sneakerstreets.netlify.app/",
+        type: "Group Project (Bootcamp)",
+        image: sneakerStreets,
+        github: "https://github.com/gsgghotra/SneakerStreets"
+    },
     {
         name: "HarmonyHeal - Music App",
         tech: "HTML, CSS, Bootstrap, JavaScript, Rest API (Spotify API)",
@@ -38,15 +48,6 @@ const projects = [
         github: "https://github.com/gsgghotra/Weather-Forecast-Dashboard"
     },
     {
-        name: "SmartHome Dashboard",
-        tech: "HTML, CSS, ReactJS, JavaScript, jQuery, Bootstrap, REST API",
-        description: "The SmartHome-Dashboard on tablet screens offers ultimate convenience.",
-        link: "https://github.com/gsgghotra/SmartHome-Dashboard",
-        type: "Solo Project (Experimental)",
-        image: smartHome,
-        github:"https://github.com/gsgghotra/SmartHome-Dashboard"
-    },
-    {
         name: "Work Day Scheduler",
         tech: "HTML, CSS, Bootstrap, JavaScript, jQuery",
         description: "A simple calendar application for saving notes for each hour of the day.",
@@ -55,14 +56,23 @@ const projects = [
         image: workDay,
         github:"https://github.com/gsgghotra/Work-Day-Scheduler"
     },
+    // {
+    //     name: "Timed Coding Quiz",
+    //     tech: "JavaScript, HTML, CSS",
+    //     description: "Test your JavaScript knowledge with Timed Coding Quiz.",
+    //     link: "https://gsgghotra.github.io/timed-coding-quiz/",
+    //     type: "Bootcamp Project",
+    //     image: codingTest,
+    //     github: "https://github.com/gsgghotra/timed-coding-quiz"
+    // },
     {
-        name: "Timed Coding Quiz",
-        tech: "JavaScript, HTML, CSS",
-        description: "Test your JavaScript knowledge with Timed Coding Quiz.",
-        link: "https://gsgghotra.github.io/timed-coding-quiz/",
-        type: "Bootcamp Project",
-        image: codingTest,
-        github: "https://github.com/gsgghotra/timed-coding-quiz"
+        name: "SmartHome Dashboard",
+        tech: "HTML, CSS, ReactJS, JavaScript, jQuery, Bootstrap, REST API",
+        description: "The SmartHome-Dashboard on tablet screens offers ultimate convenience.",
+        link: "https://github.com/gsgghotra/SmartHome-Dashboard",
+        type: "Solo Project (Experimental)",
+        image: smartHome,
+        github:"https://github.com/gsgghotra/SmartHome-Dashboard"
     },
     {
         name: "Mobile Store",
