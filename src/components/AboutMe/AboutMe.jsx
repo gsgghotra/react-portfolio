@@ -32,7 +32,7 @@ const AboutMe = () => {
                     </p>
                     </div>
                 </div>
-                <div className="flex items-center space-x-4">
+                {/* <div className="flex items-center space-x-4">
                     <div className="outer-divImage">
                         <img
                             className="image-circle"
@@ -48,7 +48,7 @@ const AboutMe = () => {
                         Worked extensively with JavaScript, MongoDB, and Express.js.
                     </p>
                     </div>
-                </div>
+                </div> */}
                 </div>
             </div>
             </section>
