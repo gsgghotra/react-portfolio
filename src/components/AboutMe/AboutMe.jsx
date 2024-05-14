@@ -28,7 +28,7 @@ const AboutMe = () => {
                     <h3 className="text-2xl font-semibold">Sofware Engineer</h3>
                     <p className="text-sm text-gray-400">Freelance - June 2022 - Present</p>
                     <p className="text-sm">
-                    Provided software applications that is built to help small businesses with their day to day tasks. It also has some handy features that would make giving your accountant all your sales information.
+                    Provided software applications that is built to help small businesses with their day to day tasks.
                     </p>
                     </div>
                 </div>
