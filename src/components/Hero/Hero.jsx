@@ -20,7 +20,7 @@ const Hero = () => {
                                     <div className="heroSubText text-center text-white">
                                         <div className="row d-flex justify-content-center">
                                             <div className="col-sm-10 col-lg-12 text-white ">
-                                                <p>A dedicated web developer from London, driven by my passion for creating exceptional digital experiences. My skills encompass JavaScript, React, CSS, HTML, Node.js, git, and GitHub, allowing me to craft dynamic and engaging web solutions.</p>
+                                                <p>A dedicated Software Engineer from London, driven by my passion for creating exceptional digital experiences. My skills encompass JavaScript, React, Python, Node.js, git, and GitHub, allowing me to craft dynamic and engaging solutions.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -41,7 +41,7 @@ const Hero = () => {
                                 {/* Starts and information around image */}
                                 <div className="star star-top position-absolute"></div>
                                 <div className="star star-bottom position-absolute"></div>
-                                <div className="text-container job position-absolute bg-black text-white d-flex justify-content-center align-items-center"><i className="fa-solid fa-laptop-code pe-2 fa-xs" style={{color: '#DE0206'}}></i>Web Developer</div>
+                                <div className="text-container job position-absolute bg-black text-white d-flex justify-content-center align-items-center"><i className="fa-solid fa-laptop-code pe-2 fa-xs" style={{color: '#DE0206'}}></i>Software Engineer</div>
                                 <div className="text-container experience position-absolute bg-black text-white d-flex justify-content-center align-items-center"><i className="fa-regular fa-bookmark pe-2" style={{color: '#F3D1BF'}}></i> ReactJS</div>
                             </div>
                         </div>

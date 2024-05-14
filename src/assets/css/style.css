@@ -28,6 +28,9 @@
     line-height:1.6em;
     word-spacing: 1px;
 }
+#myExperience{
+    background-color: var(--primaryColor);
+}
 /* Work */
 #work {
     max-width: 1400px;
@@ -256,6 +259,25 @@
 .contact-link a:hover{
     font-size: 110%;
 }
+
+/* Experience section */
+.outer-divImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    float: left;
+    margin: 8px;
+    padding-right: 20px;
+}
+
+.image-circle {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
 
 /* Card Design in work section*/
 .custom-card{
