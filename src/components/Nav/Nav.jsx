@@ -17,7 +17,7 @@ const Nav = () => {
                         <NavLink to="/contactme" className="nav-link" end> Contact me </NavLink>
                     </li>
                     <li className="nav-item">
-                        <a href={Resume} target="_blank" className="nav-link"> Resume </a>
+                        <a href={} target="_blank" className="nav-link"> Resume </a>
                     </li>
                     </ul>
                 </div>
