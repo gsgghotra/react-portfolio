@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom';
-import Resume from '../../assets/resume/GurjeetSinghResume.pdf'
 const Nav = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-expand-sm navbar-light">
@@ -15,9 +14,6 @@ const Nav = () => {
                     </li>
                     <li className="nav-item">
                         <NavLink to="/contactme" className="nav-link" end> Contact me </NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <a href={} target="_blank" className="nav-link"> Resume </a>
                     </li>
                     </ul>
                 </div>
